@@ -73,7 +73,7 @@ cc_library_headers {
 
 cc_library_static {
     name: "libbatterymonitor",
-    defaults: ["libbatterymonitor_defaults"],
+    defaults: ["libbatterymonitor_defaults", "charge_rate_multiplier_defaults"],
     srcs: ["BatteryMonitor.cpp"],
     static_libs: [
         "android.hardware.health-V3-ndk",

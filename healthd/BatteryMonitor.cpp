@@ -533,7 +533,7 @@ void BatteryMonitor::updateValues(void) {
             double power = ((double)ChargingCurrent / MILLION) *
                            ((double)ChargingVoltage / MILLION);
             if (MaxPower < power) {
-                mHealthInfo->maxChargingCurrentMicroamps = ChargingCurrent;
+                mHealthInfo->maxChargingCurrentMicroamps = ChargingCurrent * CHARGE_RATE_MULTIPLIER;
                 mHealthInfo->maxChargingVoltageMicrovolts = ChargingVoltage;
                 MaxPower = power;
             }
