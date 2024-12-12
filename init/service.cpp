@@ -704,8 +704,6 @@ Result<void> Service::Start() {
         SetMountNamespace();
     }
 
-    post_data_ = ServiceList::GetInstance().IsPostData();
-
     LOG(INFO) << "starting service '" << name_ << "'...";
 
     std::vector<Descriptor> descriptors;
