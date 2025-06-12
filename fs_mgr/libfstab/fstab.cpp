@@ -209,6 +209,8 @@ bool ParseFsMgrFlags(const std::string& flags, FstabEntry* entry) {
         CheckFlag("metadata_csum", ext_meta_csum);
         CheckFlag("fscompress", fs_compress);
         CheckFlag("overlayfs_remove_missing_lowerdir", overlayfs_remove_missing_lowerdir);
+        CheckFlag("overlay=on", overlay_on);
+        CheckFlag("overlay=off", overlay_off);
 
 #undef CheckFlag
 
